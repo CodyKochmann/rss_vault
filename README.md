@@ -9,7 +9,6 @@ Note: all pictures are stored in rss_vault/pictures
 Description: A RSS feed reader that runs through a list of links on feed_urls.txt and downloads the pictures from those.
 
 To Do list:
-[ ] add CSV conversion to lock up the files
-[ ] add export functions
-[ ] add interval checker to run in the background and stay up to date
-
+- [ ] add CSV conversion to lock up the files
+- [ ] add export functions
+- [ ] add interval checker to run in the background and stay up to date
