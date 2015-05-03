@@ -104,24 +104,6 @@ def download_file(url):
         f.write(data)
     print("finished: "+file_n)
 
-hold="""
-def download_file(url):
-    import requests
-    local_filename = url.split('/')[-1]
-    output_path = script_path()+"pictures/"
-    if local_filename in list_dir(output_path):
-        print(local_filename+" already downloaded")
-        return(False)
-    print("downloading: "+local_filename)
-    # NOTE the stream=True parameter
-    r = requests.get(url, stream=True)
-    with open(output_path+local_filename, 'wb') as f:
-        for chunk in r.iter_content(chunk_size=1024): 
-            if chunk: # filter out keep-alive new chunks
-                f.write(chunk)
-                f.flush()
-    return local_filename"""
-
 def multithreaded_process(arg_list, run_process, max_threads=4):
     # runs arg_list through run_process multithreaded
     from multiprocessing import Pool
